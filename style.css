@@ -1,0 +1,160 @@
+body {
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    background-color: #f6f4fb;
+    color: #222222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-header {
+    background-color: #e9e2f7;
+    border-bottom: 1px solid #d4caea;
+    padding: 20px 0;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.sub-main-title {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.site-navigation a {
+    text-decoration: none;
+    color: #4b3f72;
+    font-weight: bold;
+}
+
+.site-navigation a:hover {
+    text-decoration: underline;
+}
+
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 480px) {
+    .site-navigation {
+        flex-direction:column;
+    }
+}
+
+main {
+    padding: 40px 0;
+}
+
+.myself,
+.bio,
+.subpage-header,
+.card,
+.contact {
+    background-color: #ffffff;
+    border: 1px solid #e3ddee;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card h3,
+.skill-list h3 {
+    margin-top: 0;
+}
+
+.card {
+    flex: 1 1 300px;
+}
+
+.skill-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-list {
+    flex: 1 1 250px;
+}
+
+.skill-list ul {
+    margin-bottom: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-object {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+button {
+    font:inherit;
+
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #cfc6e4;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7d6aa8;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #67558e;
+}
+
+textarea {
+    resize:none;
+}
+
+.rabbit-foot {
+    background-color: #e9e2f7;
+    border-top: 1px solid #d4caea;
+    padding: 20px 0;
+    text-align: center;
+}
