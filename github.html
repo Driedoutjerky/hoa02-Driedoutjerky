@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my house. >:D</title>
+    <title>My GitHub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,24 +19,26 @@
                 <a href="contact.html">Contacts</a>
                 <a href="github.html">My GitHub</a>
             </nav>
-            <button id="theme-toggle" class="theme-toggle" type="button">Switch Theme!</button>
+
+            <button id="theme-toggle" class="theme-toggle" type="button">Switch Theme</button>
         </div>
     </header>
 
     <main class="container">
-        <section class="myself">
-            <h2>This is the portfolio of Junwon Lim.</h2>
-            <p class="intro-text">
-                I am a student interested in Operating System Design, Web programming, and music composition.
-            </p>
+        <section class="subpage-header">
+            <h2>My GitHub</h2>
+            <p>Public GitHub profile information and repositories.</p>
         </section>
 
-        <section class="bio">
-            <h2>Introduction</h2>
-            <h5>Where all chaos and fun of web programming started from.</h5>
-            <p>
-                I welcome you to my holy portfolio website. This site mainly introduces who I am, the technical skills I am learning, some things I've made, and ways to contact me.
-            </p>
+        <section id="github-profile" class="card">
+            <p>Loading profile...</p>
+        </section>
+
+        <section>
+            <h2>Repositories</h2>
+            <div id="repo-list" class="projects-list">
+                <p>Loading repositories...</p>
+            </div>
         </section>
     </main>
 
@@ -45,6 +47,7 @@
             <p>2026 Junwon Lim. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -198,6 +198,37 @@ textarea {
     resize:none;
 }
 
+.github-profile-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.github-profile-box img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--card-border);
+}
+
+.github-profile-text p {
+    margin: 6px 0;
+}
+
+.repo-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--nav-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.repo-link:hover {
+    text-decoration: underline;
+}
+
 .rabbit-foot {
     background-color: var(--header-bg);
     border-top: 1px solid var(--header-border);
