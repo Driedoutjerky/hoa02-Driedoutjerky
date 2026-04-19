@@ -118,6 +118,16 @@ main {
     gap: 20px;
 }
 
+.project-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-card.hidden {
+    display: none;
+}
+
 .card h3,
 .skill-list h3 {
     margin-top: 0;
