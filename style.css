@@ -25,7 +25,7 @@ body.dark-theme {
 }
 
 body {
-    margin:0;
+    margin: 0;
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     background-color: var(--bg-color);
@@ -60,6 +60,12 @@ body {
     font-size: 1rem;
 }
 
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
 .site-navigation a {
     text-decoration: none;
     color: var(--nav-color);
@@ -70,15 +76,9 @@ body {
     text-decoration: underline;
 }
 
-.site-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
 @media (max-width: 480px) {
     .site-navigation {
-        flex-direction:column;
+        flex-direction: column;
     }
 }
 
@@ -157,7 +157,7 @@ main {
     gap: 16px;
 }
 
-.form-object {
+.form-group {
     display: flex;
     flex-direction: column;
 }
@@ -170,8 +170,7 @@ label {
 input,
 textarea,
 button {
-    font:inherit;
-
+    font: inherit;
 }
 
 input,
@@ -179,6 +178,8 @@ textarea {
     padding: 12px;
     border: 1px solid var(--input-border);
     border-radius: 8px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
 }
 
 button {
@@ -190,12 +191,12 @@ button {
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     background-color: var(--button-hover);
 }
 
 textarea {
-    resize:none;
+    resize: none;
 }
 
 .github-profile-box {
@@ -227,6 +228,137 @@ textarea {
 
 .repo-link:hover {
     text-decoration: underline;
+}
+
+.music-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.music-card {
+    flex: 1 1 250px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease, opacity 0.35s ease;
+    transform-style: preserve-3d;
+}
+
+.music-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.music-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.music-card p {
+    margin: 0;
+}
+
+.music-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.music-card.selected {
+    transform: scale(1.06) rotateY(8deg);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+.music-grid.has-selected .music-card {
+    opacity: 0.55;
+    filter: blur(1px);
+}
+
+.music-grid.has-selected .music-card.selected {
+    opacity: 1;
+    filter: none;
+}
+
+.music-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.music-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.music-modal {
+    width: 90%;
+    max-width: 430px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.music-overlay.hidden .music-modal {
+    transform: scale(0.85);
+}
+
+.music-modal img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 12px;
+    margin: 0 auto 16px;
+    display: block;
+}
+
+.music-modal h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.music-modal p {
+    margin-bottom: 16px;
+}
+
+.music-modal audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background-color: var(--button-bg);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 0;
+}
+
+.close-btn:hover {
+    background-color: var(--button-hover);
 }
 
 .rabbit-foot {

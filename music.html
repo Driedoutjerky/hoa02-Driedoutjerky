@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste of my music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container-flex">
+            <h1 class="main-title">The mightest portfolio</h1>
+            <h5 class="sub-main-title">"Maybe."</h5>
+
+            <nav class="site-navigation">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+                <a href="github.html">My GitHub</a>
+                <a href="music.html">Music</a>
+            </nav>
+
+            <button id="theme-toggle" class="theme-toggle">Switch Theme</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="subpage-header">
+            <h2>Music Archive</h2>
+            <p>Select a music card to dive into the story.</p>
+        </section>
+
+        <section class="music-grid">
+            <article class="music-card"
+                data-title="Remnant of the lot 666"
+                data-description="Reinterpretation of the overture from The Phantom of the Opera."
+                data-audio="audio/remnant-of-the-lot-666.m4a"
+                data-cover="images/remnant-of-the-lot-666.jpg">
+                <img src="images/remnant-of-the-lot-666.jpg" alt="Remnant of the lot 666 cover">
+                <h3>Remnant of the lot 666</h3>
+                <p>Musical / Orchestral</p>
+            </article>
+
+            <article class="music-card"
+                data-title="Eternity in a moment"
+                data-description="A dreamy ambient composition."
+                data-audio="audio/eternity-in-a-moment.m4a"
+                data-cover="images/eternity-in-a-moment.jpg">
+                <img src="images/eternity-in-a-moment.jpg" alt="Eternity in a moment cover">
+                <h3>Eternity in a moment</h3>
+                <p>Ambient / Dreamy / Piano</p>
+            </article>
+        </section>
+    </main>
+
+    <div id="music-overlay" class="music-overlay hidden">
+        <div class="music-modal">
+            <button id="close-music-modal" class="close-btn" aria-label="Close music player">×</button>
+
+            <img id="modal-cover" src="" alt="Album cover">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+
+            <audio id="modal-audio" controls>
+                <source id="modal-audio-source" src="" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <footer class="rabbit-foot">
+        <div class="container">
+            <p>2026 Junwon Lim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+</body>
+</html>
